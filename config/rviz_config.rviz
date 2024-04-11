@@ -1,0 +1,26 @@
+global_options:
+  fixed_frame: "base_link"  # Marco de referencia fijo para la visualización
+
+visualization_manager:
+  view_controller:
+    orbit: {lookat: [0.0, 0.0, 0.0], distance: 2.0}  # Vista de órbita centrada en el origen
+
+# Configuración para visualizar el modelo del robot
+robot_model:
+  robot_description: "robot_description"  # Nombre del parámetro que contiene la descripción del robot
+  robot_alpha: 1.0  # Opacidad del modelo del robot
+
+# Configuración para mostrar las articulaciones del robot
+joint_state:
+  topic: "/joint_states"  # Tópico que publica el estado de las articulaciones del robot
+
+# Configuración para mostrar la cuadrícula
+grid:
+  enabled: true  # Habilitar la cuadrícula
+  alpha: 0.2  # Opacidad de la cuadrícula
+  cell_count: 20  # Tamaño de la cuadrícula
+  color: {r: 0.5, g: 0.5, b: 0.5}  # Color de la cuadrícula
+
+# Configuración para mostrar los ejes de referencia
+axes:
+  axes: true  # Mostrar ejes de referencia
